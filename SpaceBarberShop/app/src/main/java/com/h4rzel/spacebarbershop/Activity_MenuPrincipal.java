@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -55,6 +57,12 @@ public class Activity_MenuPrincipal extends AppCompatActivity implements Navigat
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        // Carregar o fragmento inicial
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.T04_FrmLyt_Telas, new Fragment_Home()).commit();
+            navigationView.setCheckedItem(R.id.MMN00_Itm_Agendamentos);
+        }
 
     }
 
@@ -113,17 +121,23 @@ public class Activity_MenuPrincipal extends AppCompatActivity implements Navigat
 
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment selecionaFragmento = null;
         switch (item.getItemId()) {
             case R.id.MMN00_Itm_Perfil:
                 // handle click
+                selecionaFragmento = new Fragment_Perfil();
+                Toast.makeText(Activity_MenuPrincipal.this, "Tela Perfil", Toast.LENGTH_LONG);
                 break;
             case R.id.MMN00_Itm_Barbearia:
                 // handle click
+
                 break;
             case R.id.MMN00_Itm_Agendamentos:
                 // handle click
+                selecionaFragmento = new Fragment_Home();
                 break;
             case R.id.MMN00_Itm_Sobre:
                 // handle click
@@ -131,6 +145,10 @@ public class Activity_MenuPrincipal extends AppCompatActivity implements Navigat
             case R.id.MMN00_Itm_Logout:
                 // handle click
                 break;
+        }
+
+        if (selecionaFragmento != null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.T04_FrmLyt_Telas, selecionaFragmento).commit();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

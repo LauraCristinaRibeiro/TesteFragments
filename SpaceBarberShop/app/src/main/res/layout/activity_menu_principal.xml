@@ -8,15 +8,7 @@
     android:background="#FFF"
     tools:context=".Activity_MenuPrincipal">
 
-    <!-- Menu Lateral -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/T04_NavVw_MenuLateral"
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/cab_menu_lateral"
-        app:itemIconTint="@color/yellow"
-        app:menu="@menu/menu_lateral" />
+
 
     <!-- Conteúdo Principal -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,12 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/yellow"
-            app:navigationIcon="@drawable/ic_menu"
-            app:title="Menu Principal"
-            app:titleTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_menu"
+            app:title="Menu Principal"
+            app:titleTextColor="@color/black" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/Act04_TabLt_AbasDeNavegacao"
@@ -47,16 +39,26 @@
             app:tabGravity="fill"
             app:tabMode="fixed" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/Act04_VwPgr2_MonitorDeTelas"
+
+        <FrameLayout
+            android:id="@+id/T04_FrmLyt_Telas"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Act04_TabLt_AbasDeNavegacao" />
+            app:layout_constraintTop_toBottomOf="@id/T04_Toolbar_MenuPrincipal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Menu Lateral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/T04_NavVw_MenuLateral"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/cab_menu_lateral"
+        app:itemIconTint="@color/yellow"
+        app:menu="@menu/menu_lateral" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
