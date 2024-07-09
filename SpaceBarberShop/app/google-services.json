@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "403248657007",
+    "project_id": "app-space-barber-shop",
+    "storage_bucket": "app-space-barber-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403248657007:android:b1c5535184c7cae6bd139a",
+        "android_client_info": {
+          "package_name": "com.h4rzel.spacebarbershop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDQ7FEBkMy9Cp7Z85AHdXSYJi76-ZWb_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

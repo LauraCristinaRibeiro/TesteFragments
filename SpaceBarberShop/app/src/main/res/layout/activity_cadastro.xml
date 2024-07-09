@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity_Cadastro">
+
+    <TextView
+        android:id="@+id/T02_EdtTx_NovoCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="NOVO CADASTRO"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/T02_TxtVw_Cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:text="Cliente"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintEnd_toStartOf="@+id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintTop_toTopOf="@+id/T02_Swch_ClienteBarbearia" />
+
+    <TextView
+        android:id="@+id/T02_TxtVw_Barbearia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:text="Barbearia"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintStart_toEndOf="@+id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintTop_toTopOf="@+id/T02_Swch_ClienteBarbearia" />
+
+    <Switch
+        android:id="@+id/T02_Swch_ClienteBarbearia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="35dp"
+        android:minHeight="35dp"
+        android:paddingStart="10dp"
+        android:checked="false"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:switchMinWidth="70dp"
+        android:thumbTint="@color/yellow"
+        android:trackTint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/T02_EdtTx_NovoCadastro" />
+
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Nome"
+        style="@style/container_edittext"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icn_usuario"
+        android:drawablePadding="10dp"
+        android:hint="Nome"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintStart_toStartOf="@id/T02_Swch_ClienteBarbearia"
+        app:layout_constraintTop_toBottomOf="@id/T02_Swch_ClienteBarbearia" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_RazaoSocial"
+        style="@style/container_edittext"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icn_razaosocial"
+        android:drawablePadding="10dp"
+        android:hint="Razão Social"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Nome"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Nome"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Nome" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Telefone"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_telefone"
+        android:drawablePadding="10dp"
+        android:hint="Telefone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_RazaoSocial"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_RazaoSocial"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_RazaoSocial" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Cnpj"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_cnpj"
+        android:drawablePadding="10dp"
+        android:hint="CNPJ"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Telefone"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Telefone"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Telefone" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Cidade"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_cidade"
+        android:drawablePadding="10dp"
+        android:hint="Cidade"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Cnpj"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Cnpj"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Cnpj" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Endereco"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_endereco"
+        android:drawablePadding="10dp"
+        android:hint="Endereço"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Cidade"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Cidade"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Cidade" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Email"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_email"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Endereco"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Endereco"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Endereco" />
+
+    <EditText
+        android:id="@+id/T02_EdtTx_Senha"
+        style="@style/container_edittext"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icn_senha"
+        android:drawablePadding="10dp"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/T02_EdtTx_Email"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Email"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Email" />
+
+    <TextView
+
+        android:id="@+id/T02_TxtVw_JaPossuiConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ja possui uma conta?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/T02_EdtTx_Senha"
+        app:layout_constraintTop_toBottomOf="@id/T02_EdtTx_Senha" />
+
+    <TextView
+        android:id="@+id/T02_TxtVw_CliqueAqui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Clique aqui!"
+        android:textColor="@color/yellow"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/T02_TxtVw_JaPossuiConta"
+        app:layout_constraintTop_toTopOf="@+id/T02_TxtVw_JaPossuiConta" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/T02_AppCmpBtn_Entrar"
+        style="@style/button"
+        android:layout_marginBottom="20dp"
+        android:text="Cadastrar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Space Barber Shop</string>
+    <string name="T04_Str_Menu">MENU</string>
+    <string name="T04_Str_NomeBarbearia">Barbearia 01</string>
+    <string name="T04_Str_Endereço">Endereço da Barbearia</string>
+    <string name="T03_str_PromtRedefinirSenha">Não se preocupe insira seu cadastro de <b>E-mail</b> \npara receber link para redefinição de senha.</string>
+    <string name="T03_str_RedefinirSenha">REDEFINIR SENHA</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Fechar</string>
+</resources>

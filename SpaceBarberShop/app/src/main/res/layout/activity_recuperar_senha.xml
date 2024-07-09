@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity_RecuperarSenha">
+
+
+    <TextView
+        android:id="@+id/T03_txtVW_RedefinirSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/T03_str_RedefinirSenha"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/T03_TxtVw_Email"
+        android:layout_width="380sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/T03_str_PromtRedefinirSenha"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/T03_txtVW_RedefinirSenha"
+
+        />
+
+    <EditText
+        android:id="@+id/T03_EdtTxt_Email"
+        android:layout_width="380sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/bg_edt_email"
+        android:drawableLeft="@drawable/ic_edt_yellow"
+        android:drawablePadding="10dp"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/T03_TxtVw_Email" />
+
+    <TextView
+        android:id="@+id/T03_TxtVw_Senha"
+        android:layout_width="155dp"
+        android:layout_height="23sp"
+        android:layout_marginTop="20dp"
+        android:text=" Esqueceu sua senha?"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/T03_btn_CliqueAqui"
+        app:layout_constraintStart_toStartOf="@+id/T03_EdtTxt_Email"
+        app:layout_constraintTop_toBottomOf="@id/T03_EdtTxt_Email" />
+
+    <TextView
+        android:id="@+id/T03_btn_CliqueAqui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clique aqui!"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/T03_TxtVw_Senha"
+        app:layout_constraintTop_toTopOf="@id/T03_TxtVw_Senha" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/T03_Btn_Enviar"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_btn_yellow"
+        android:text="Enviar"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
